@@ -8,10 +8,9 @@ class App extends React.Component {
         <main className={styles.component}>
           <h1 className={styles.title}>My first React app</h1>
           <h2 className={styles.subtitle}>Second line of code</h2>
-          <List />
+          <List title={['Things to do', <sup key='1'>soon!</sup>]} image={'https://i.postimg.cc/zv0N6hY2/space.png'} />
         </main>
     )
   }
 }
-
 export default App;

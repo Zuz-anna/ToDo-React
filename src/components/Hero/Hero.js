@@ -8,11 +8,11 @@ const Hero = props => (
     <h2 className={styles.title}>{ReactHtmlParser(props.titleText)}</h2>
     <img className={styles.image} src={props.imageSource} />
   </header>
-)
+);
 
 Hero.propTypes = {
-  titleText: PropTypes.node.isRequired,
-  imageSource: PropTypes.string.isRequired,
+  titleText: PropTypes.node,
+  imageSource: PropTypes.string,
 };
 export default Hero;
 

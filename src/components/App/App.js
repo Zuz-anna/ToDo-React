@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './App.scss';
-import List from '../List/List';
+import List from '../List/ListContainer.js';
 import PropTypes from 'prop-types';
 
 class App extends React.Component {
@@ -13,7 +13,6 @@ class App extends React.Component {
   render() {
     const {lists} = this.props;
     return (
-
       <main className={styles.component}>
         <h1 className={styles.title}>{this.props.title}</h1>
         <h2 className={styles.subtitle}>{this.props.subtitle}</h2>

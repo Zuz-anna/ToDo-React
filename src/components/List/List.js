@@ -14,13 +14,14 @@ class List extends React.Component {
     description: PropTypes.node,
     columns: PropTypes.array,
     addColumn: PropTypes.func,
+    deleteColumn: PropTypes.func,
   }
   static defaultProps = {
     description: settings.defaultListDescription,
   }
   
   render() {
-    const {title, image, description, columns, addColumn} = this.props;
+    const {title, image, description, columns, addColumn, deleteColumn} = this.props;
   
     return (
       <section className={styles.component}>
@@ -30,7 +31,7 @@ class List extends React.Component {
         </div>
         <div className={styles.columns}>
           {columns.map(columnData => (
-            <Column key={columnData.id} {...columnData} />
+            <Column key={columnData.id} action={deleteColumn} {...columnData} />
           ))}
         </div>
         <div className={styles.creator}>
